@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSE312 Website</title>
+    <link rel="stylesheet" href="../static/chat-style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="body-div">
+        <div class="banner">
+          <p class="title-text">IntraLeagues</p>
+          <a href="/" class="back-button">Back</a>
+        </div>
+        <div class="chat-body">
+          <div class="chat-left">
+              <p class="chat-room-text">Chat Room</p>
+                <div class="chat-room" id="chat-room">
+                  {% for message in messages %}
+                    <p class="user-message">{{ message[1] }} | Team {{ message[2] }}: {{ message[3] }}</p>
+                  {% endfor %}
+                </div>
+              <form class="chat-form" action="/chat-message" method="post">
+                <input class="chat-box" type="text" name="message" id="message=box" placeholder="Send a chat!"/>
+                <input name="username" value={{name}} type="hidden"/>
+                <input name="team" value={{team}} type="hidden"/>
+                <button type="submit" name="chat-buttton" id="chat-btn" class="chat-button">Send</button>
+              </form>
+          </div>
+          <div class="chat-right">
+            <p class="profile-header">Welcome {{name}}</p>
+            <img src={{profile}} class="chat-profile-image"/>
+            <p class="profile-header">From Team: {{team}}</p>
+          </div>
+        </div>
+    </div>
+	<script src="../static/functions.js"></script>
+  </body>
+</html>

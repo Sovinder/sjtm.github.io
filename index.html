@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSE312 Website</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+  <div class="total">
+    <div class="banner">
+      <p class="title-text">IntraLeagues</p>
+    </div>
+    <div class="body-div">
+      <div class="right-half">
+        <p class="labels2">Login to join or create a team</p>
+        <form class="form-format">
+          <label class="labels">Join a Team Here!</label>
+          <div class="image-div">
+            <button class="button-design">Join Team</button>
+            <img src="../static/team.png" class="team-image">
+          </div>
+        </form>
+        <form class="form-format">
+          <label class="labels">Create A Team Here!</label>
+          <div class="image-div">
+            <button class="button-design">Create a Team</button>
+            <img src="../static/create.png" class="team-image">
+          </div>
+        </form>
+        <div class="form-format">
+          <label class="labels">See Offered Sports</label>
+          <ul id="dropdown"></ul>
+        </div>
+      </div>
+      <div class="left-half">
+        {% if user_type %}
+        <div class="logged-in">
+          <p class="labels23">Welcome, {{name}}</p>
+          <p class="labels23">Team: {{team}}</p>
+          <form action="/profile" class="profile-form" method="post" enctype="multipart/form-data">
+            <input type="file" name="profilePic" id="profilePic"/>
+            <img id="preview" class="null" src={{profile}}/>
+            <button type="submit" class="profile-button">Upload Profile Picture</button>
+          </form>
+          <label class="label3">Chat with other users below!</label>
+          <form action="/chat" method="POST">
+            <button class="button-design2" type="submit" onclick="updateChatRoom()">Find a Team/Chat</button>
+            <input name="name" value={{name}} type="hidden"/>
+            <input name="team" value={{team}} type="hidden"/>
+            <input name="profile"  value={{profile}} type="hidden"/>
+          </form>
+          <p></p>
+          <p></p>
+          <form  method="post" action="/logout">
+            <button class="button-design2" type="submit">Logout</button>
+          </form>
+        </div>
+        {% else %}
+        <form class="credentials-form" action="/register" method="POST">Create an Account
+          <label class="label3">Username</label>
+          <input name="reg-username" class="input-field" type="text"/>
+          <label class="label3">Password</label>
+          <div class="password-container">
+            <input name="reg-password" type="password" class="input-field" />
+            <div class="question-mark" id="question-mark">?</div>
+            <div class="password-info" id="password-info">Password must be at least 8 characters long and contain at least one uppercase letter, one number, and one special character.</div>
+          </div>
+          <label class="label3">Confirm Password</label>
+          <input name="reg-confirm" type="password" class="input-field"/>
+          <button class="login-btn" type="submit">Register</button>
+        </form>
+        <div class="register-error">
+          {% if register_error %}
+          <p class="error">{{ register_error }}</p>
+          {% endif %}
+        </div>
+        <form class="credentials-form" action="/login" method="POST">Login
+          <label class="label3">Username</label>
+          <input class="input-field" type="text" name="log-username"/>
+          <label class="label3">Password</label>
+          <input type="password" class="input-field" name="log-password"/>
+          <button class="login-btn" type="submit">Login</button>
+        </form>
+        <div class="login-error">
+          {% if login_error %}
+          <p class="error">{{ login_error }}</p>
+          {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="footer">
+    <p class="label34">Contact Us</p>
+    <p class="label345">About Us</p>
+  </div>
+</div>
+	<script src="../static/functions.js"></script>
+  </body>
+</html>

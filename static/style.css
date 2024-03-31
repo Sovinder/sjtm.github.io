@@ -1,0 +1,264 @@
+body{
+  overflow: hidden;
+  border:0px;
+  margin:0;
+  padding:0;
+}
+
+.right-half{
+  padding-top:5vh;
+  display:flex;
+  width:50%;
+  flex-direction: column;
+  height:80vw;
+}
+.left-half{
+  display:flex;
+  width:50%;
+  flex-direction: column;
+  height:80vw;
+}
+.banner{
+  width:100vw;
+  height:5vw;
+  background-color: #00ABE4;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer{
+  width:100vw;
+  height:5vw;
+  background-color: #00ABE4;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.title-text{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color:white;
+}
+.total{
+  overflow-y: hidden;
+  overflow-x:hidden;
+  background-color: #E9F1FA;
+  width:100vw;
+  height:100vh;
+}
+.form-format{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding-left:15vw;
+  padding-top:5vh;
+}
+.body-div{
+  display: flex;
+  flex-direction: row;
+  width:100vw;
+  height:80vh;
+  
+}
+.button-design{
+  width:10vw;
+  height:5vh;
+  background-color: #00ABE4;
+  border-radius: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: antiquewhite;
+  border:0;
+  font-size: 100%;
+}
+
+.button-design:hover{
+  color: #ff7a59;
+  border: #ff7a59 solid 1px;
+  background:#fff;
+  cursor: pointer;
+}
+.login-btn:hover{
+  color: #ff7a59;
+  border: #ff7a59 solid 1px;
+  background:#fff;
+  cursor: pointer;
+}
+.labels{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+.labels2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 28px;
+  padding-left:15vw;
+}
+.labels23{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 28px;
+}
+.label3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  padding-top:1vh;
+}
+.label34{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  padding-left:10vw;
+
+  color:antiquewhite;
+}
+.label345{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  padding-right:10vw;
+  color:antiquewhite;
+}
+.image-div{
+  height:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.team-image{
+  width:2vw;
+  height:3vh;
+  border-radius: 10px;
+  padding-left:1vw;
+}
+.logged-in{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: left;
+padding: 6vh;
+padding-left:15vw;
+}
+
+.credentials-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:left;
+  padding:6vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  padding-left:15vw;
+}
+.input-field{
+  width:50%;
+}
+.login-btn{
+  width:20%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  color:antiquewhite;
+  height:5vh;
+  background-color: #00ABE4;
+  border-radius: 10px;
+  border:0;
+}
+
+.button-design2{
+width:10vw;
+height:5vh;
+background-color: #00ABE4;
+border-radius: 10px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: antiquewhite;
+border:0;
+font-size: 100%;
+}
+
+.button-design2:hover{
+color: #ff7a59;
+border: #ff7a59 solid 1px;
+background:#fff;
+cursor: pointer;
+}
+
+.question-mark {
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: #ccc;
+color: #fff;
+border-radius: 50%;
+text-align: center;
+line-height: 20px;
+cursor: pointer;
+}
+
+.password-container {
+position: relative;
+}
+
+.password-info {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+border: 1px solid #ccc;
+padding: 5px;
+border-radius: 5px;
+width: 200px;
+top: calc(50% - 10px); 
+left: calc(55% + 5px); 
+z-index: 1;
+font-size: 12px;
+}
+
+.question-mark:hover + .password-info {
+display: block;
+} 
+
+.register-error {
+position: relative; 
+top: -50px;
+padding-left: 15vw; 
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 15px;
+}
+
+.login-error {
+position: relative;
+top: -50px; 
+padding-left: 15vw; 
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 15px;
+}
+.null{
+  width:50%;
+  height:auto;
+  border-radius: 10px;
+}
+.profile-button{
+  color:antiquewhite;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:small;
+  border:0px;
+  border-radius:5px;
+  background:#00ABE4;
+  width:50%;
+  height:auto;
+}
+
+.profile-button:hover{
+  color: #ff7a59;
+  border: #ff7a59 solid 1px;
+  background:#fff;
+  cursor: pointer;
+  }
+.profile-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  width:50%;
+  height:auto;
+}
+

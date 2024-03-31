@@ -1,0 +1,194 @@
+body{
+    overflow: hidden;
+    border:0px;
+    margin:0;
+    padding:0;
+}
+.chat-body{
+    display:flex;
+    flex-direction: row;
+    height:95vh;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-div{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner{
+    width:100vw;
+    height:7vw;
+    background-color: #00ABE4;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.chat-left{
+    display:flex;
+    width:50vw;
+    height:95vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left:2%;
+}
+
+.chat-right{
+    display:flex;
+    width:50vw;
+    height:95vh;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding-left:5%;
+    padding-top:5vh;
+}
+.chat-chat{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    padding:0.5%;
+}
+.chat-chat > * {
+    margin-right: 2px; /* Adjust the value as needed */
+}
+
+.chat-room{
+    width:100%;
+    border:solid 3px #00ABE4;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    overflow:scroll;
+    height:70vh;
+    padding-left:2%;
+    background-color: #D4F1F4;
+}
+.chat-room-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:black;
+}
+.title-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color:white;
+}
+.profile-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color:black;
+}
+.chat-form{
+    display:flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: center;
+    width:50vw;
+    height:5vh;
+    padding-top:1%;
+}
+.chat-box{
+    width:35vw;
+    height:5vh;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color:black;
+}
+.chat-button{
+    width:10vw;
+    height:5vh;
+    background-color: #00ABE4;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    border:0;
+    font-size: 100%;
+    padding-left:1%;
+  }
+  
+  .chat-button:hover{
+    color: #ff7a59;
+    border: #ff7a59 solid 1px;
+    background:#fff;
+    cursor: pointer;
+  }
+  .profile-form{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+    width:100%; 
+  }
+
+.profile-image{
+    width:2vw;
+    height:3vh;
+    border-radius: 10px;
+    padding-left:1vw;
+}
+.profile-header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color:black;
+}
+.user-message {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 0.5%;
+    width: 80%;
+    max-width: 85%;
+    word-wrap: break-word;
+    margin-bottom:1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: black 1px 1px;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #abeaff;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-button{
+    border-radius: 5px;
+    height: 25px;
+    width:60px;
+    color:#00ABE4;
+}
+.like-count{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:10px;
+    color:#000000;
+}
+
+.like-button:hover{
+    color: #ff7a59;
+    border: #ff7a59 solid 1px;
+    background:#fff;
+    cursor: pointer;
+  }
+.chat-profile-image{
+    width:50%;
+    height:auto;
+    border-radius:10px;
+}
